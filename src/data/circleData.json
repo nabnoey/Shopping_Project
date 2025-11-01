@@ -1,0 +1,37 @@
+[{
+    "id": 1,
+    "label": "ชาย",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/481006/item/thgoods_07_481006_3x4.jpg?width=294",
+    "link": "/category/men"
+  },
+  {
+    "id": 2,
+    "label": "หญิง",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/478557001/item/thgoods_35_478557001_3x4.jpg?width=294",
+    "link": "/category/women"
+  },
+  {
+    "id": 3,
+    "label": "เด็ก",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/471244/item/goods_01_471244_3x4.jpg?width=294",
+    "link": "/category/kids"
+  },
+  {
+    "id": 4,
+    "label": "เสื้อโปโล",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/th/imagesgoods/480290/item/thgoods_01_480290_3x4.jpg?width=294",
+    "link": "/category/polo"
+  },
+  {
+    "id": 5,
+    "label": "เสื้อเชิ้ต",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/475648/item/goods_61_475648_3x4.jpg?width=294",
+    "link": "/category/shirt"
+  },
+  {
+    "id": 6,
+    "label": "แจ็กเก็ต",
+    "imageUrl": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/476942/item/goods_64_476942_3x4.jpg?width=294",
+    "link": "/category/jacket"
+  }
+]

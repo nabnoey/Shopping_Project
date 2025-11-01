@@ -1,0 +1,20 @@
+[
+  {
+    "imageUrl": "https://www.fashionisland.co.th/wp-content/uploads/2023/12/HM-ESS-Sale-up-to-50.jpg",
+    "title": "ลดราคาครั้งใหญ่ 50%",
+    "description": "อย่าพลาดโอกาสทอง ช้อปเลยตอนนี้สินค้ามีจำนวนจำกัด!",
+    "link": "/sale"
+  },
+  {
+    "imageUrl": "https://static.naewna.com/uploads/news/source/732410.jpg",
+    "title": "คอลเลคชั่นใหม่ล่าสุด",
+    "description": "พบกับดีไซน์อินเทรนด์ก่อนใครได้ที่นี่",
+    "link": "/new-collection"
+  },
+  {
+    "imageUrl": "https://www.extremeit.com/wp-content/uploads/2019/07/%E0%B8%A3%E0%B8%A1%E0%B8%B2%E0%B9%88%E0%B8%97%E0%B8%B7%E0%B9%89.jpg",
+    "title": "จัดส่งฟรีทั่วประเทศ",
+    "description": "ซื้อสินค้าครบ 1,000 บาท จัดส่งฟรีทันที",
+    "link": "/shipping-info"
+  }
+]
