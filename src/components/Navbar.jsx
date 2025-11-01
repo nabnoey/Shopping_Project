@@ -6,7 +6,7 @@ function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="navbar bg-[#FFF4FB] text-black py-7 px-10 relative">
+    <div className="navbar bg-[#FFF4FB] text-black py-7 px-10 relative ">
    
       <div className="flex-1">
         <a className="btn btn-ghost text-[36px] text-black hover:bg-transparent">
@@ -20,7 +20,7 @@ function Navbar() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
+            className="h-7 w-10"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
