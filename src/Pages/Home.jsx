@@ -1,10 +1,7 @@
-
-import React from 'react'
-import Navbar from '../components/Navbar'
-
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Navbar from '../components/Navbar'
 
 import slides from '../data/dbslide.json';
 
@@ -22,6 +19,16 @@ const Home = () => {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
+    <>
+    <Navbar/>
+    <div className="flex justify-left pl-50 bg-[#FFF4FB]">
+  <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
+    <li><a>ชาย</a></li>
+    <li><a>หญิง</a></li>
+    <li><a>อื่น ๆ</a></li>
+  </ul>
+</div>
+
     <div className="w-full min-h-screen bg-gray-50 flex flex-col items-center py-10 px-4 font-inter"> 
       <div className="w-full max-w-7xl flex flex-col"> 
         <div className="pb-5 text-center"> 
@@ -123,6 +130,7 @@ const Home = () => {
         
       </div>
     </div>
+    </>
   );
 };
 
