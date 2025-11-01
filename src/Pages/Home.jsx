@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Navbar from '../components/Navbar'
 import Card_Product from "../components/Card_Product";
 
 import slides from '../data/dbslide.json';
@@ -21,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-    <Navbar/>
+  
     <div className="flex justify-left pl-50 bg-[#FFF4FB]">
   <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
     <li><a>ชาย</a></li>
@@ -72,7 +71,7 @@ const Home = () => {
 
     
     <>
-<Navbar />
+
 <div className="flex justify-left pl-40 bg-[#FFF4FB]">
   <ul className="menu menu-horizontal rounded-box text-black text-[20px] gap-x-10">
     <li><a>ชาย</a></li>
@@ -120,7 +119,7 @@ const Home = () => {
             </button>
           </div>
               <div className="pt-18 flex gap-x-15">
-                 <Card_Product/>  <Card_Product/>  <Card_Product/>
+                 <Card_Product/>  <Card_Product/>  <Card_Product/> <Card_Product/>
             </div>
         </div>
         <div className="flex justify-between items-center w-full px-2 pt-28">
@@ -133,7 +132,7 @@ const Home = () => {
             </button>
           </div>
               <div className="pt-18 flex gap-x-15">
-                 <Card_Product/>  <Card_Product/>  <Card_Product/>
+                 <Card_Product/>  <Card_Product/>  <Card_Product/> <Card_Product/>
             </div>
 
         
