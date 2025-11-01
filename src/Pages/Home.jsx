@@ -1,4 +1,7 @@
 
+import React from 'react'
+import Navbar from '../components/Navbar'
+
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -58,6 +61,22 @@ const Home = () => {
               </a>
             ))}
           </div>
+
+    
+    <>
+<Navbar />
+<div className="flex justify-left pl-40 bg-[#FFF4FB] p-1">
+  <ul className="menu menu-horizontal rounded-box text-black text-[20px] gap-x-10">
+    <li><a>ชาย</a></li>
+    <li><a>หญิง</a></li>
+    <li><a>เด็ก</a></li>
+  </ul>
+</div>
+
+
+
+    </>
+    
 
           <button
             onClick={scrollPrev}
