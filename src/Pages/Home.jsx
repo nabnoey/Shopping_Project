@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Navbar from '../components/Navbar'
+import Card_Product from "../components/Card_Product";
 
 import slides from '../data/dbslide.json';
 
@@ -105,20 +106,37 @@ const Home = () => {
         
         {/* New Product */}
         <div className="pt-61 text-center"> 
-          <h1 className="text-6xl font-extrabold text-gray-800 drop-shadow-sm mb-6">
+          <h1 className="text-6xl font-bold text-gray-800 drop-shadow-sm mb-6">
             New Product
           </h1>
           
-          <div className="flex justify-between items-center w-full px-2">
-            <h2 className="text-2xl font-bold text-gray-700 truncate">Polo</h2> 
-            <button className="text-blue-600 hover:text-blue-800 font-normal flex items-center" type="button">
+          <div className="flex justify-between items-center w-full px-2 pt-15">
+            <h2 className="text-[40px] font-medium text-gray-700 truncate">Polo</h2> 
+            <button className="text-blue-600 hover:text-blue-800 font-normal flex items-center text-[20px]" type="button">
               ดูทั้งหมด
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ml-1 w-4 h-4">
                 <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"></path>
               </svg>
             </button>
           </div>
+              <div className="pt-18 flex gap-x-15">
+                 <Card_Product/>  <Card_Product/>  <Card_Product/>
+            </div>
         </div>
+        <div className="flex justify-between items-center w-full px-2 pt-28">
+            <h2 className="text-[40px] font-medium text-gray-700 truncate">Oversize</h2> 
+            <button className="text-blue-600 hover:text-blue-800 font-normal flex items-center text-[20px]" type="button">
+              ดูทั้งหมด
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="ml-1 w-4 h-4">
+                <path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"></path>
+              </svg>
+            </button>
+          </div>
+              <div className="pt-18 flex gap-x-15">
+                 <Card_Product/>  <Card_Product/>  <Card_Product/>
+            </div>
+
+        
 
 
         {/* Collection */}
