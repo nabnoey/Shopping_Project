@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -48,10 +49,10 @@ function Navbar() {
         </div>
 
        
-        <button className="btn bg-[#afd6f8] border-pink-200 hover:bg-[#FFD8EC] text-pink-700 rounded-full px-5 font-medium transition-all flex items-center gap-2">
+        <Link to="/login" className="btn bg-[#afd6f8] border-pink-200 hover:bg-[#FFD8EC] text-pink-700 rounded-full px-5 font-medium transition-all flex items-center gap-2">
           <FiUser className="text-[22px]" />
           Login
-        </button>
+        </Link>
       </div>
 
      

@@ -1,8 +1,6 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Navbar from '../components/Navbar'
-
 import slides from '../data/dbslide.json';
 
 const Home = () => {
@@ -20,7 +18,7 @@ const Home = () => {
 
   return (
     <>
-    <Navbar/>
+
     <div className="flex justify-left pl-50 bg-[#FFF4FB]">
   <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
     <li><a>ชาย</a></li>
@@ -71,7 +69,7 @@ const Home = () => {
 
     
     <>
-<Navbar />
+
 <div className="flex justify-left pl-40 bg-[#FFF4FB]">
   <ul className="menu menu-horizontal rounded-box text-black text-[20px] gap-x-10">
     <li><a>ชาย</a></li>
