@@ -1,24 +1,35 @@
-import React from 'react'
-import { MdAddShoppingCart } from "react-icons/md";
+import React from "react";
+import { MdShoppingCart } from "react-icons/md";
 
-function Card_Product() {
+function Card_Product({ product }) {
+  const mockProduct = {
+    product_name: "ตัวอย่างสินค้า",
+    price: 0,
+    image: "https://via.placeholder.com/250x300.png?text=No+Image",
+  };
+
+  const item = product || mockProduct;
+
   return (
-   <div className="card bg-base-100 w-70 shadow-sm">
-  <figure>
-    <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-      alt="Shoes" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title">Card Title</h2>
-    <h3 className="flex justify-right font-bold text-[21px]">฿200</h3>
-    <div className="card-actions justify-end">
-      <button className="btn rounded-[30px] bg-blue-100 w-22 h-10">
-        <MdAddShoppingCart className='text-black text-[20px]'/></button>
+    <div className="card bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 w-60">
+      <figure className="h-60 flex items-center justify-center bg-[#FFF4FB]">
+        <img
+          src={item.image}
+          alt={item.product_name}
+          className="h-full object-contain"
+        />
+      </figure>
+      <div className="card-body p-4">
+        <h2 className="card-title text-lg font-semibold">{item.product_name}</h2>
+        <p className="text-pink-600 font-bold text-[18px]">฿{item.price}</p>
+        <div className="card-actions justify-end mt-2">
+           <button className="btn bg-pink-100 hover:bg-pink-200 p-2 rounded-full">
+              <MdShoppingCart className="text-pink-600 text-xl" />
+        </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-  )
+  );
 }
 
-export default Card_Product
+export default Card_Product;
