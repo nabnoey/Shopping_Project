@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Login() {
+function Register() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="w-[900px] h-[450px] bg-white rounded-3xl shadow-xl flex overflow-hidden">
         
         <div className="w-1/2 bg-[#6fa8dc] rounded-l-3xl"></div>
@@ -15,32 +15,44 @@ function Login() {
             Login to your account
           </p>
 
-          {/* form */}
-          <div className="w-full mt-6 space-y-4">
+  
+          <div className="w-full mt-6 space-y-4 text-blue-400">
+            <input
+              type="name"
+              placeholder="Name"
+              className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
+            />
             <input
               type="email"
               placeholder="Email"
               className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
             />
-            <input
+
+              <input
+              type="phone"
+              placeholder="Phone"
+              className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
+            />
+
+             <input
               type="password"
               placeholder="Password"
               className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
             />
+             <input
+              type="password"
+              placeholder="Confirm Password"
+              className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
+            />
 
-            <div className="text-right text-xs">
-              <a href="#" className="underline text-gray-500">
-                Forgot your password?
-              </a>
-            </div>
+
+           
 
             <button className="w-full py-2 bg-[#3d85c6] text-white rounded-full shadow-md mt-4 hover:bg-[#6fa8dc] font-medium">
-              LOG IN
+              Submit
             </button>
 
-               <a href='/register' className="btn border-blue-600  w-full py-2 bg-white text-blue-600 rounded-full shadow-md mt-2 hover:bg-[#b6d3ed] font-medium">
-              Create Account
-            </a>
+              
           </div>
         </div>
       </div>
@@ -48,4 +60,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Register
