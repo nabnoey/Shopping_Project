@@ -7,6 +7,7 @@ import PoloShirt from "../Category/Men/PoloShirt.jsx";
 import Oversize from "../Category/Men/oversize-shirt.jsx";
 import Sweater from "../Category/Men/sweaterShirt.jsx";
 import Pants from "../Category/Men/pants.jsx";
+import ShirtKids from "../Category/Kids/ShirtKids.jsx";
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,11 @@ children: [
   {
     path:"/category/pants",
     element:<Pants />
+  },
+
+  {
+    path:"/category/kids",
+    element:<ShirtKids />
   }
 
 

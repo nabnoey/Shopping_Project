@@ -374,7 +374,237 @@
   "price": 280,
   "image": "https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-kids-navy-jogger-pant--isolated-png-image_11598724.png",
   "description": "กางเกงวอร์มเด็ก ทรงลำลอง ใส่ได้ในทุกวัน"
+},
+{
+  "id": 42,
+  "product_name": "เสื้อยืดเด็ก ลายการ์ตูนไดโนเสาร์",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 260,
+  "image": "https://png.pngtree.com/png-vector/20230821/ourmid/pngtree-kids-dinosaur-graphic-t-shirt-png-image_13106127.png",
+  "description": "เสื้อยืดเด็ก ลายไดโนเสาร์สีสดใส"
+},
+{
+  "id": 43,
+  "product_name": "เสื้อยืดเด็ก ลายยูนิคอร์น",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 270,
+  "image": "https://png.pngtree.com/png-vector/20240607/ourmid/pngtree-cute-girl-kids-tshirt-graphic-design-png-image_12975392.png",
+  "description": "เสื้อยืดเด็ก น่ารักสไตล์ยูนิคอร์น"
+},
+{
+  "id": 44,
+  "product_name": "เสื้อยืดเด็ก สีเหลืองสด",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 240,
+  "image": "https://png.pngtree.com/png-vector/20250523/ourlarge/pngtree-a-fashionable-woman-in-yellow-dress-and-stylish-accessories-png-image_16356787.png",
+  "description": "เสื้อยืดเด็ก สีเหลืองสดใส ใส่แล้วดูเด่น"
+},
+{
+  "id": 45,
+  "product_name": "เสื้อยืดเด็ก สีชมพู น่ารัก",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 250,
+  "image": "https://img.th.my-best.com/product_images/b899a7108c8b8a180b6b12c4f2c81e35.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=2d84b57a937ea2ace109e8caf96ca7a7",
+  "description": "เสื้อยืดเด็กลุคหวาน นุ่มสบาย"
+},
+{
+  "id": 46,
+  "product_name": "เสื้อยืดเด็ก ลายหัวใจ",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 255,
+  "image": "https://png.pngtree.com/png-vector/20241211/ourmid/pngtree-cozy-pink-sweater-with-heart-motif-and-floral-embroidery-for-winter-png-image_14648847.png",
+  "description": "ลายน่ารัก ใส่แล้วดูสดใส"
+},
+{
+  "id": 47,
+  "product_name": "กางเกงยีนส์เด็ก สีอ่อน",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 290,
+  "image": "https://png.pngtree.com/png-vector/20240221/ourmid/pngtree-light-blue-kids-jeans-isolated-png-image_11643539.png",
+  "description": "ยีนส์เด็กโทนสว่าง ใส่เที่ยวได้"
+},
+{
+  "id": 48,
+  "product_name": "กางเกงขาสั้นเด็ก สีฟ้า",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 230,
+  "image": "https://png.pngtree.com/png-clipart/20230830/original/pngtree-kids-blue-shorts-png-image_13246660.png",
+  "description": "ขาสั้นเด็ก ใส่สบายทุกวัน"
+},
+{
+  "id": 49,
+  "product_name": "กางเกงวอร์มเด็ก สีกรม",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 280,
+  "image": "https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-kids-navy-jogger-pant--isolated-png-image_11598724.png",
+  "description": "กางเกงวอร์มเด็ก ใส่ออกกำลังกายได้"
+},
+{
+  "id": 50,
+  "product_name": "กางเกงผ้าเด็ก ทรงตรง",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 270,
+  "image": "https://png.pngtree.com/png-vector/20240226/ourmid/pngtree-baby-boy-pants-isolated-png-image_11678577.png",
+  "description": "ผ้าใส่สบาย เหมาะกับเด็กซน"
+},
+{
+  "id": 51,
+  "product_name": "กางเกงยีนส์เด็ก ขาดปลายเท่ๆ",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 300,
+  "image": "https://png.pngtree.com/png-vector/20240209/ourmid/pngtree-distressed-blue-jeans-kids-png-image_11605850.png",
+  "description": "ยีนส์เด็กสไตล์แฟชั่น"
+},
+{
+  "id": 52,
+  "product_name": "เซ็ตเสื้อ-กางเกง ลายดอกไม้",
+  "category": "Set",
+  "gender": "kids",
+  "price": 390,
+  "image": "https://png.pngtree.com/png-vector/20240218/ourmid/pngtree-cute-baby-girls-dress-kids-png-image_11630397.png",
+  "description": "ชุดเซ็ตน่ารัก ลายดอกสดใส"
+},
+{
+  "id": 53,
+  "product_name": "เซ็ตเสื้อโปโลเด็ก + กางเกงขาสั้น",
+  "category": "Set",
+  "gender": "kids",
+  "price": 420,
+  "image": "https://png.pngtree.com/png-vector/20240214/ourmid/pngtree-baby-poloshirt-and-shorts-set-png-image_11623549.png",
+  "description": "ชุดเซ็ตเด็กคูลๆ ใส่ไปเที่ยว"
+},
+{
+  "id": 54,
+  "product_name": "เซ็ตเสื้อแขนยาว + กางเกงลายทาง",
+  "category": "Set",
+  "gender": "kids",
+  "price": 450,
+  "image": "https://png.pngtree.com/png-vector/20240210/ourmid/pngtree-baby-boy-hoodie-pant-set-png-image_11607566.png",
+  "description": "ชุดลำลอง ใส่สบาย"
+},
+{
+  "id": 55,
+  "product_name": "ชุดเด็กชาย สปอร์ตเซ็ต",
+  "category": "Set",
+  "gender": "kids",
+  "price": 480,
+  "image": "https://png.pngtree.com/png-vector/20240208/ourmid/pngtree-boys-sporty-tracksuit-kids-png-image_11601871.png",
+  "description": "ลุคสปอร์ต เหมาะกับเล่นซน"
+},
+{
+  "id": 56,
+  "product_name": "เซ็ตเสื้อยืด + กางเกงยีนส์",
+  "category": "Set",
+  "gender": "kids",
+  "price": 450,
+  "image": "https://png.pngtree.com/png-vector/20240223/ourmid/pngtree-boy-outfit-set-children-png-image_11651463.png",
+  "description": "ชุดเด็กเซ็ตคลาสสิก"
+},
+{
+  "id": 57,
+  "product_name": "Hoodie เด็ก สีชมพู",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 350,
+  "image": "https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-pink-hoodie-front-view-kids-png-image_11598523.png",
+  "description": "ฮู้ดเด็กผ้านิ่ม"
+},
+{
+  "id": 58,
+  "product_name": "Sweater เด็ก สีเทา",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 340,
+  "image": "https://png.pngtree.com/png-vector/20240202/ourmid/pngtree-gray-sweater-mockup-cutout-png-file-png-image_11589332.png",
+  "description": "เสื้อกันหนาวเด็ก สีเทาเรียบ"
+},
+{
+  "id": 59,
+  "product_name": "Sweater เด็ก สีดำ",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 360,
+  "image": "https://png.pngtree.com/png-vector/20240708/ourmid/pngtree-black-sweater-mockup-png-image_13012907.png",
+  "description": "เสื้อกันหนาวเด็กคลาสสิค"
+},
+{
+  "id": 60,
+  "product_name": "Sweater เด็ก สีฟ้าอ่อน",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 350,
+  "image": "https://inwfile.com/s-ds/b8z96z.jpg",
+  "description": "ผ้านุ่มใส่สบาย เหมาะกับอากาศเย็น"
+},
+{
+  "id": 61,
+  "product_name": "Hoodie เด็ก ลายหมี",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 370,
+  "image": "https://png.pngtree.com/png-vector/20240504/original/pngtree-teddy-bear-print-t-shirt-png-image_14815649.png",
+  "description": "ฮู้ดเด็ก ลายหมีสุดน่ารัก"
+},
+{
+  "id": 62,
+  "product_name": "เดรสเด็ก ลายดอกไม้ สีชมพู",
+  "category": "Dress",
+  "gender": "kids",
+  "price": 390,
+  "image": "https://png.pngtree.com/png-vector/20240723/ourmid/pngtree-pink-floral-kids-dress-png-image_13136630.png",
+  "description": "เดรสดอกไม้หวาน น่ารัก"
+},
+{
+  "id": 63,
+  "product_name": "เดรสเด็ก สีฟ้าพาสเทล",
+  "category": "Dress",
+  "gender": "kids",
+  "price": 420,
+  "image": "https://png.pngtree.com/png-vector/20230508/ourmid/pngtree-baby-blue-dress-girls-png-image_909301.png",
+  "description": "เดรสโทนฟ้า ลุคสดใสน่ารัก"
+},
+{
+  "id": 64,
+  "product_name": "เดรสเด็ก ลายริบบิ้น",
+  "category": "Dress",
+  "gender": "kids",
+  "price": 410,
+  "image": "https://png.pngtree.com/png-vector/20241022/ourmid/pngtree-cute-kids-bow-dress-png-image_14329707.png",
+  "description": "เดรสลายโบว์หวานมาก"
+},
+{
+  "id": 65,
+  "product_name": "เดรสเด็ก สีครีม นิ่มสบาย",
+  "category": "Dress",
+  "gender": "kids",
+  "price": 430,
+  "image": "https://png.pngtree.com/png-vector/20250531/ourmid/pngtree-cute-cream-kids-dress-png-image_16416531.png",
+  "description": "เดรสเด็กผ้านุ่ม ใส่สบาย"
+},
+{
+  "id": 66,
+  "product_name": "เดรสเด็ก ลายหัวใจแดง",
+  "category": "Dress",
+  "gender": "kids",
+  "price": 440,
+  "image": "https://png.pngtree.com/png-vector/20240721/ourmid/pngtree-sunnei-layered-long-sleeved-crop-top-png-image_13175668.png",
+  "description": "ลายหัวใจเด่น สดใสน่ารัก"
 }
+
+
+
+
+
 
 
 
