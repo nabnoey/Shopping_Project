@@ -79,18 +79,11 @@ const Home = () => {
             </div>
 
             <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-<<<<<<< HEAD
-              <Card_Product />
-              <Card_Product />
-              <Card_Product />
-              <Card_Product />
-=======
-             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {productsData.products.map((product) => (
                 <Card_Product key={product.id} product={product} />
               ))}
               </div>
->>>>>>> Feature/clothing-category-page
             </div>
          
 
