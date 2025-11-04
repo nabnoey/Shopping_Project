@@ -21,7 +21,7 @@ const Home = () => {
       {/* Menu Bar */}
       <div className="flex justify-start pl-[50px] bg-[#FFF4FB] p-2 w-full">
         <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
-          <li><a>ชาย</a></li>
+          <li><a href="/category/oversize-shirt">ชาย</a></li>
           <li><a>หญิง</a></li>
           <li><a>เด็ก</a></li>
         </ul>

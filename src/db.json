@@ -247,6 +247,136 @@
       "price": 300,
       "image": "https://png.pngtree.com/png-vector/20250523/ourlarge/pngtree-a-fashionable-woman-in-yellow-dress-and-stylish-accessories-png-image_16356787.png",
       "description": "Crop Top สีเหลืองสดใส เพิ่มความมั่นใจ"
-    }
+    },
+    {
+  "id": 28,
+  "product_name": "กางเกงยีนส์ผู้ชาย สีเข้ม",
+  "category": "Pants",
+  "gender": "ชาย",
+  "price": 550,
+  "image": "https://down-th.img.susercontent.com/file/cn-11134207-7ras8-m6gjknlsby4r09.webp",
+  "description": "กางเกงยีนส์ทรงสลิมสีเข้ม ใส่ได้ทุกสไตล์"
+},
+{
+  "id": 29,
+  "product_name": "กางเกงยีนส์ผู้หญิง ขาเต่อ",
+  "category": "Pants",
+  "gender": "หญิง",
+  "price": 520,
+  "image": "https://png.pngtree.com/png-clipart/20240519/original/pngtree-blue-cropped-jeans-womens-clothing-png-image_14979454.png",
+  "description": "กางเกงยีนส์ขาเต่อผู้หญิง ใส่แล้วดูขายาว"
+},
+{
+  "id": 30,
+  "product_name": "เสื้อยืดเด็ก ลายหมี",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 250,
+  "image": "https://png.pngtree.com/png-clipart/20240504/original/pngtree-teddy-bear-print-t-shirt-png-image_14815649.png",
+  "description": "เสื้อยืดเด็กน่ารัก ลายหมีสำหรับทุกโอกาส"
+},
+{
+  "id": 31,
+  "product_name": "กางเกงขาสั้นเด็ก สีฟ้า",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 230,
+  "image": "https://png.pngtree.com/png-clipart/20230830/original/pngtree-kids-blue-shorts-png-image_13246660.png",
+  "description": "กางเกงขาสั้นเด็กเบา ใส่สบายในทุกวัน"
+},
+
+{
+  "id": 32,
+  "product_name": "กางเกงยีนส์ผู้หญิง สีดำ",
+  "category": "Pants",
+  "gender": "หญิง",
+  "price": 540,
+  "image": "https://png.pngtree.com/png-vector/20240622/ourmid/pngtree-black-skinny-jeans-on-transparent-background-png-image_12841063.png",
+  "description": "กางเกงยีนส์สีดำเข้ม ทรงสวย ใส่เข้ารูป"
+},
+{
+  "id": 33,
+  "product_name": "กางเกงขาสั้นผู้ชาย สีเบจ",
+  "category": "Pants",
+  "gender": "ชาย",
+  "price": 320,
+  "image": "https://png.pngtree.com/png-vector/20230724/ourmid/pngtree-men-s-simple-khaki-shorts-png-image_7630277.png",
+  "description": "กางเกงขาสั้นสีเบจ ใส่สบาย เหมาะกับวันชิลๆ"
+},
+{
+  "id": 34,
+  "product_name": "กางเกงยีนส์ผู้ชาย รุ่่น Classic Blue",
+  "category": "Pants",
+  "gender": "ชาย",
+  "price": 580,
+  "image": "https://png.pngtree.com/png-vector/20230522/ourmid/pngtree-men-s-blue-jeans-png-image_7143331.png",
+  "description": "ยีนส์สีน้ำเงินเข้ม ทรงตรง คลาสสิคตลอดกาล"
+},
+{
+  "id": 35,
+  "product_name": "กางเกงผ้าผู้หญิง ทรงกระบอก",
+  "category": "Pants",
+  "gender": "หญิง",
+  "price": 450,
+  "image": "https://png.pngtree.com/png-vector/20240229/ourmid/pngtree-women-s-wide-leg-pants-front-view-png-image_11690228.png",
+  "description": "กางเกงผ้าทรงกระบอก ใส่สบาย ลุคมินิมอล"
+},
+{
+  "id": 36,
+  "product_name": "กางเกง Jogger ผู้ชาย สีเทา",
+  "category": "Pants",
+  "gender": "ชาย",
+  "price": 390,
+  "image": "https://png.pngtree.com/png-vector/20240226/ourmid/pngtree-mens-gray-jogger-pants-png-image_11678531.png",
+  "description": "Jogger ผ้ายืด สปอร์ต ใส่ออกกำลังกายได้"
+},
+{
+  "id": 37,
+  "product_name": "เสื้อยืดเด็ก ลายไดโนเสาร์",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 260,
+  "image": "https://png.pngtree.com/png-vector/20230821/ourmid/pngtree-kids-dinosaur-graphic-t-shirt-png-image_13106127.png",
+  "description": "เสื้อยืดเด็ก ลายไดโนเสาร์ สีสดใส"
+},
+{
+  "id": 38,
+  "product_name": "เสื้อยืดเด็ก ลายนางฟ้า",
+  "category": "Tshirt",
+  "gender": "kids",
+  "price": 270,
+  "image": "https://png.pngtree.com/png-vector/20240607/ourmid/pngtree-cute-girl-kids-tshirt-graphic-design-png-image_12975392.png",
+  "description": "เสื้อยืดเด็ก ลายการ์ตูนนางฟ้า น่ารักสดใส"
+},
+{
+  "id": 39,
+  "product_name": "กางเกงยีนส์เด็ก สีอ่อน",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 290,
+  "image": "https://png.pngtree.com/png-vector/20240221/ourmid/pngtree-light-blue-kids-jeans-isolated-png-image_11643539.png",
+  "description": "กางเกงยีนส์เด็กสีอ่อน ใส่ออกนอกบ้านได้ทุกวัน"
+},
+{
+  "id": 40,
+  "product_name": "เสื้อ Hoodies เด็ก สีชมพู",
+  "category": "Sweater",
+  "gender": "kids",
+  "price": 350,
+  "image": "https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-pink-hoodie-front-view-kids-png-image_11598523.png",
+  "description": "เสื้อฮู้ดเด็กผ้านิ่ม ใส่อบอุ่น"
+},
+{
+  "id": 41,
+  "product_name": "กางเกงวอร์มเด็ก สีกรม",
+  "category": "Pants",
+  "gender": "kids",
+  "price": 280,
+  "image": "https://png.pngtree.com/png-vector/20240206/ourmid/pngtree-kids-navy-jogger-pant--isolated-png-image_11598724.png",
+  "description": "กางเกงวอร์มเด็ก ทรงลำลอง ใส่ได้ในทุกวัน"
+}
+
+
+
   ]
 }

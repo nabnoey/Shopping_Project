@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className="navbar bg-[#FFF4FB] text-black py-7 px-10 relative ">
       <div className="flex-1">
-        <a className="btn btn-ghost text-[36px] text-black hover:bg-transparent">
+        <a href="/" className = "btn btn-ghost text-[36px] text-black hover:bg-transparent">
           Brand
         </a>
 

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "label": "เสื้อ Oversize",
+    "imageUrl": "https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/zoom/c823f897ff0b5eaca9fd1c4488ba01089fc679c4_xxl-1.jpg",
+    "link": "/category/oversize-shirt"
+  },
+  {
+    "id": 2,
+    "label": "เสื้อ Polo",
+    "imageUrl": "https://maytaporn.com/wp-content/uploads/2020/11/POLO-RALPH-LAUREN-01.jpg",
+    "link": "/category/polo-shirt"
+  },
+
+  {
+    "id": 3,
+    "label": "เสื้อ sweater",
+    "imageUrl": "https://a.lnwfile.com/_/a/_raw/hk/qb/7l.png",
+    "link": "/category/sweater"
+  },
+  {
+    "id": 4,
+    "label": "กางเกง",
+    "imageUrl": "https://www.bluebearuniform.com/wp-content/uploads/2021/01/pict_17RP04BK1F30.png",
+    "link": "/category/pants"
+  }
+  
+]
