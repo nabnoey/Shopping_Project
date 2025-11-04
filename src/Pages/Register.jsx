@@ -62,7 +62,7 @@ const handleSubmit = () => {
           </p>
 
   
-          <div className="w-full mt-6 space-y-4 text-blue-400">
+          <div className="w-full font-semibold text-[15px] mt-6 space-y-4 text-blue-400">
             <input
               type="name"
               placeholder="Name"

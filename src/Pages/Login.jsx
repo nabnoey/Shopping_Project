@@ -50,13 +50,13 @@ const handleLogin = () => {
             <input
               type="email"
               placeholder="Email"
-              className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
+              className="w-full text-slate-900 py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
               onChange={(e)=>setEmail(e.target.value)}
             />
             <input
               type="password"
               placeholder="Password"
-              className="w-full py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
+              className="w-full  text-slate-900 py-2 px-4 rounded-full bg-[#ddebf7] outline-none"
               onChange={(e)=>setPassword(e.target.value)}
             />
 
