@@ -81,6 +81,7 @@ const Home = () => {
               <Card_Product />
               <Card_Product />
               <Card_Product />
+              <Card_Product />
             </div>
           </div>
 
