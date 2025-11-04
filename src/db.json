@@ -1,0 +1,252 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "เสื้อ Oversize สีขาว",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 350,
+      "image": "https://img.th.my-best.com/product_images/c306c877b9128d7a303eee798f47d7d8.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=c561fc32aef4507cab372bd07cbc8b7a",
+      "description": "เสื้อ Oversize ผ้าฝ้ายแท้ นุ่มใส่สบาย"
+    },
+    {
+      "id": 2,
+      "product_name": "เสื้อ Oversize สีดำ",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 370,
+      "image": "https://png.pngtree.com/png-vector/20240420/ourmid/pngtree-black-oversized-fit-t-shirt-mockup-png-image_12302566.png",
+      "description": "เสื้อ Oversize สีดำทรงหลวม ใส่ชิลได้ทุกวัน"
+    },
+    {
+      "id": 3,
+      "product_name": "เสื้อ Oversize ลายกราฟิก",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 390,
+      "image": "https://png.pngtree.com/png-vector/20240724/ourmid/pngtree-wild-and-spirit-sporty-graphic-print-t-shirt-png-image_13049884.png",
+      "description": "เสื้อ Oversize ลายกราฟิกเกาหลีสุดน่ารัก"
+    },
+    {
+      "id": 4,
+      "product_name": "เสื้อ Oversize สีครีม",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 360,
+      "image": "https://png.pngtree.com/png-vector/20240123/ourmid/pngtree-beige-t-shirt-mockup-png-image_11464714.png",
+      "description": "เสื้อ Oversize สีครีมเรียบง่าย ใส่ได้ทุกวัน"
+    },
+    {
+      "id": 5,
+      "product_name": "เสื้อ Oversize ลายดอกไม้",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 380,
+      "image": "https://png.pngtree.com/png-vector/20241205/ourmid/pngtree-white-t-shirt-with-floral-design-png-image_14639004.png",
+      "description": "เสื้อ Oversize ลายดอกไม้ ผ้าเบา ใส่สบาย"
+    },
+
+    {
+      "id": 6,
+      "product_name": "เสื้อ Oversize ผู้ชาย สีเทา",
+      "category": "Oversize",
+      "gender": "ชาย",
+      "price": 390,
+      "image": "https://png.pngtree.com/png-clipart/20230930/original/pngtree-gray-t-shirt-mockup-realistic-t-shirt-png-image_13020286.png",
+      "description": "เสื้อ Oversize ผู้ชาย สีเทาเข้ม ดูดีมีสไตล์"
+    },
+    {
+      "id": 7,
+      "product_name": "เสื้อ Oversize ผู้ชาย สีกรม",
+      "category": "Oversize",
+      "gender": "ชาย",
+      "price": 400,
+      "image": "https://png.pngtree.com/png-vector/20240426/ourmid/pngtree-navy-t-shirt-png-image_12322364.png",
+      "description": "เสื้อ Oversize ผู้ชาย ใส่สบาย เหมาะกับทุกโอกาส"
+    },
+    {
+      "id": 8,
+      "product_name": "เสื้อ Oversize ผู้ชาย ลายกราฟิก",
+      "category": "Oversize",
+      "gender": "ชาย",
+      "price": 410,
+      "image": "https://png.pngtree.com/png-vector/20250110/ourmid/pngtree-amazon-political-t-shirt-png-image_14442621.png",
+      "description": "เสื้อ Oversize ลายกราฟิกเท่ๆ สำหรับหนุ่มสตรีท"
+    },
+    {
+      "id": 9,
+      "product_name": "เสื้อ Oversize ผู้ชาย สีเขียวเข้ม",
+      "category": "Oversize",
+      "gender": "ชาย",
+      "price": 390,
+      "image": "https://png.pngtree.com/png-vector/20250729/ourmid/pngtree-olive-green-t-shirt-mockup-with-simple-textured-fabric-png-image_16917261.webp",
+      "description": "เสื้อ Oversize สีเขียวเข้ม ใส่เท่ๆ ได้ทุกโอกาส"
+    },
+
+    {
+      "id": 10,
+      "product_name": "เสื้อ Polo ผู้ชาย สีกรม",
+      "category": "Polo",
+      "gender": "ชาย",
+      "price": 450,
+      "image": "https://png.pngtree.com/png-vector/20240624/ourmid/pngtree-blank-blue-polo-shirt-front-view-png-image_12844704.png",
+      "description": "เสื้อโปโลชาย ทรงเรียบหรู ใส่ทำงานได้"
+    },
+    {
+      "id": 11,
+      "product_name": "เสื้อ Polo ผู้ชาย สีขาว",
+      "category": "Polo",
+      "gender": "ชาย",
+      "price": 440,
+      "image": "https://png.pngtree.com/png-clipart/20250117/original/pngtree-mockup-of-male-white-polo-shirt-design-png-image_19285292.png",
+      "description": "เสื้อโปโลชาย สีขาวเรียบ ใส่ได้ทุกโอกาส"
+    },
+    {
+      "id": 12,
+      "product_name": "เสื้อ Polo ผู้ชาย ลายทาง",
+      "category": "Polo",
+      "gender": "ชาย",
+      "price": 460,
+      "image": "https://png.pngtree.com/png-vector/20250902/ourmid/pngtree-men-s-blue-and-white-striped-polo-shirt-with-emblem-clipart-png-image_17353987.webp",
+      "description": "เสื้อโปโลชายลายทาง เพิ่มลุคสปอร์ต"
+    },
+    {
+      "id": 13,
+      "product_name": "เสื้อ Polo ผู้หญิง สีชมพู",
+      "category": "Polo",
+      "gender": "หญิง",
+      "price": 430,
+      "image": "https://www.egosportthailand.com/wp-content/uploads/2023/02/%E0%B8%8A%E0%B8%A1%E0%B8%9E%E0%B8%B9%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87_optimized.png",
+      "description": "เสื้อโปโลผู้หญิง สีชมพูอ่อน ใส่ทำงานหรือเที่ยวได้"
+    },
+    {
+      "id": 14,
+      "product_name": "เสื้อ Polo ผู้หญิง สีฟ้า",
+      "category": "Polo",
+      "gender": "หญิง",
+      "price": 440,
+      "image": "https://png.pngtree.com/png-vector/20240624/ourmid/pngtree-blank-blue-polo-shirt-front-view-png-image_12844704.png",
+      "description": "เสื้อโปโลผู้หญิง สีฟ้าเรียบหรู"
+    },
+
+    {
+      "id": 15,
+      "product_name": "เสื้อ Sweater สีเทา",
+      "category": "Sweater",
+      "gender": "ชาย",
+      "price": 520,
+      "image": "https://png.pngtree.com/png-vector/20240202/ourmid/pngtree-gray-sweater-mockup-cutout-png-file-png-image_11589332.png",
+      "description": "เสื้อ Sweater ผ้าหนานุ่ม เหมาะกับหน้าหนาว"
+    },
+    {
+      "id": 16,
+      "product_name": "เสื้อ Sweater สีดำ",
+      "category": "Sweater",
+      "gender": "ชาย",
+      "price": 530,
+      "image": "https://png.pngtree.com/png-vector/20240708/ourmid/pngtree-black-sweater-mockup-png-image_13012907.png",
+      "description": "เสื้อ Sweater สีดำคลาสสิค ใส่กับอะไรก็เท่"
+    },
+    {
+      "id": 17,
+      "product_name": "เสื้อ Sweater สีครีม",
+      "category": "Sweater",
+      "gender": "หญิง",
+      "price": 510,
+      "image": "https://png.pngtree.com/png-vector/20250530/ourmid/pngtree-cream-turtleneck-sweater-front-view-isolated-on-white-png-image_16412263.png",
+      "description": "เสื้อ Sweater สีครีมน่ารัก เหมาะกับอากาศเย็น"
+    },
+    {
+      "id": 18,
+      "product_name": "เสื้อ Sweater ลายหัวใจ",
+      "category": "Sweater",
+      "gender": "หญิง",
+      "price": 520,
+      "image": "https://png.pngtree.com/png-vector/20241211/ourmid/pngtree-cozy-pink-sweater-with-heart-motif-and-floral-embroidery-for-winter-png-image_14648847.png",
+      "description": "Sweater ลายหัวใจ ผ้าอบอุ่น ใส่สบาย"
+    },
+
+    {
+      "id": 19,
+      "product_name": "เสื้อ Crop Top สีชมพู",
+      "category": "Crop",
+      "gender": "หญิง",
+      "price": 290,
+      "image": "https://img.th.my-best.com/product_images/b899a7108c8b8a180b6b12c4f2c81e35.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=2d84b57a937ea2ace109e8caf96ca7a7",
+      "description": "Crop Top สีชมพูสดใส เหมาะกับวันสบายๆ"
+    },
+    {
+      "id": 20,
+      "product_name": "เสื้อ Crop Top สีดำ",
+      "category": "Crop",
+      "gender": "หญิง",
+      "price": 310,
+      "image": "https://th.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-cropped-tshirt-w/-silk-ties--FTTS90ZHP900_PM1_Back%20view.jpg",
+      "description": "Crop Top สีดำเท่ๆ ใส่กับกางเกงยีนส์ได้ทุกวัน"
+    },
+    {
+      "id": 21,
+      "product_name": "เสื้อ Crop Top แขนยาว",
+      "category": "Crop",
+      "gender": "หญิง",
+      "price": 320,
+      "image": "https://png.pngtree.com/png-vector/20240721/ourmid/pngtree-sunnei-layered-long-sleeved-crop-top-png-image_13175668.png",
+      "description": "Crop Top แขนยาว ผ้าคอตตอนนุ่ม"
+    },
+
+    {
+      "id": 22,
+      "product_name": "เสื้อ Polo ผู้ชาย ลายขวาง",
+      "category": "Polo",
+      "gender": "ชาย",
+      "price": 470,
+      "image": "https://png.pngtree.com/png-clipart/20240814/original/pngtree-boys-white-regular-fit-stripe-polo-neck-t-shirt-png-image_15772087.png",
+      "description": "เสื้อโปโลผู้ชายลายขวาง สไตล์สปอร์ต"
+    },
+    {
+      "id": 23,
+      "product_name": "เสื้อ Oversize สีแดง",
+      "category": "Oversize",
+      "gender": "หญิง",
+      "price": 365,
+      "image": "https://png.pngtree.com/png-vector/20240124/ourmid/pngtree-red-isolated-t-shirt-png-image_11480334.png",
+      "description": "เสื้อ Oversize สีแดงสดใส ใส่เที่ยวได้ทุกโอกาส"
+    },
+    {
+      "id": 24,
+      "product_name": "เสื้อ Oversize ผู้ชาย สีเบจ",
+      "category": "Oversize",
+      "gender": "ชาย",
+      "price": 390,
+      "image": "https://png.pngtree.com/png-vector/20230922/ourmid/pngtree-tan-men-s-classic-t-shirt-front-and-back-png-image_10145665.png",
+      "description": "เสื้อ Oversize ผู้ชาย สีเบจเข้ม ใส่เท่ๆ"
+    },
+    {
+      "id": 25,
+      "product_name": "เสื้อ Sweater ผู้ชาย สีกรม",
+      "category": "Sweater",
+      "gender": "ชาย",
+      "price": 540,
+      "image": "https://img.th.my-best.com/product_images/e3e1da4546bc6e5c3ca154fde70bba2f.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=1644220fa691f6b3e680b82b267804be",
+      "description": "Sweater สีกรมเข้ม ดูสุภาพและเท่"
+    },
+    {
+      "id": 26,
+      "product_name": "เสื้อ Sweater ผู้หญิง สีฟ้าอ่อน",
+      "category": "Sweater",
+      "gender": "หญิง",
+      "price": 500,
+      "image": "https://inwfile.com/s-ds/b8z96z.jpg",
+      "description": "Sweater สีฟ้าอ่อน ผ้านุ่มน่ารัก"
+    },
+    {
+      "id": 27,
+      "product_name": "เสื้อ Crop Top สีเหลือง",
+      "category": "Crop",
+      "gender": "หญิง",
+      "price": 300,
+      "image": "https://png.pngtree.com/png-vector/20250523/ourlarge/pngtree-a-fashionable-woman-in-yellow-dress-and-stylish-accessories-png-image_16356787.png",
+      "description": "Crop Top สีเหลืองสดใส เพิ่มความมั่นใจ"
+    }
+  ]
+}

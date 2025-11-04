@@ -5,6 +5,7 @@ import Card_Product from "../components/Card_Product";
 import slides from "../data/dbslide.json";
 import circleData from "../data/circleData.json";
 import advertisementData from "../data/advertisementData.json";
+import productsData from "../db.json";
 
 const Home = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -67,9 +68,9 @@ const Home = () => {
           </div>
 
           {/* New Product */}
-          <div className="pt-16 text-center">
+          <div className="pt-70 text-center">
             <h1 className="text-6xl font-bold text-gray-800 drop-shadow-sm mb-6">New Product</h1>
-
+          </div>
             <div className="flex justify-between items-center w-full px-2 pt-6">
               <h2 className="text-[40px] font-medium text-gray-700 truncate">Polo</h2>
               <button className="text-blue-600 hover:text-blue-800 text-[20px]" type="button">
@@ -78,15 +79,23 @@ const Home = () => {
             </div>
 
             <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
+<<<<<<< HEAD
               <Card_Product />
               <Card_Product />
               <Card_Product />
               <Card_Product />
+=======
+             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {productsData.products.map((product) => (
+                <Card_Product key={product.id} product={product} />
+              ))}
+              </div>
+>>>>>>> Feature/clothing-category-page
             </div>
-          </div>
+         
 
           {/* Collection Section */}
-          <div className="pt-24 text-center">
+          <div className="pt-70 text-center">
             <h1 className="text-6xl font-extrabold text-blue-600 mb-6">Collection</h1>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
               <a href="https://www.yuedpao.com/KODNUM-cat.k2eqy0?sorter=PRODUCT_SORTER_POPULAR" className="rounded-lg overflow-hidden shadow-lg">
@@ -156,9 +165,11 @@ const Home = () => {
           </div>
 
           <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-            <Card_Product />
-            <Card_Product />
-            <Card_Product />
+             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {productsData.products.map((product) => (
+                <Card_Product key={product.id} product={product} />
+              ))}
+              </div>
           </div>
 
           {/* Trousers */}
@@ -168,9 +179,11 @@ const Home = () => {
           </div>
 
           <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-            <Card_Product />
-            <Card_Product />
-            <Card_Product />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {productsData.products.map((product) => (
+                <Card_Product key={product.id} product={product} />
+            ))}
+            </div>
           </div>
         </div>
       </div>
