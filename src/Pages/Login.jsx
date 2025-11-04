@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Swal from "sweetalert2"
 
 function Login() {
 
@@ -9,15 +10,25 @@ const handleLogin = () => {
   const userData = JSON.parse(localStorage.getItem("users")) || []
 
   const found = userData.find(
-    (u) => email === email && u.password === password  )
+    (u) => u.email === email && u.password === password
+  )
 
-    if(found){
-         localStorage.setItem("currentUser", JSON.stringify(found));
-      alert("เข้าสู่ระบบสำเร็จ");
+  if(found){
+    localStorage.setItem("currentUser", JSON.stringify(found));
+    Swal.fire({
+      icon: "success",
+      title: "เข้าสู่ระบบสำเร็จ",
+      confirmButtonColor: "#3d85c6",
+    }).then(() => {
       window.location.href = "/"
-    }else{
-      alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง")
-    }
+    })
+  }else{
+    Swal.fire({
+      icon: "error",
+      title: "อีเมลหรือรหัสผ่านไม่ถูกต้อง",
+      confirmButtonColor: "#d33",
+    })
+  }
 }
 
   return (
