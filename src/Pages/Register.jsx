@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import Swal from "sweetalert2"
+
 
 function Register() {
 
@@ -10,19 +12,40 @@ function Register() {
 
 const handleSubmit = () => {
   if (password !== confirmPassword){
-    alert("รหัสผ่านไม่ตรง");
+    Swal.fire({
+      icon: "error",
+      title: "รหัสผ่านไม่ตรงกัน",
+      confirmButtonColor: "#d33",
+    })
     return
   }
 
-  const usersData = JSON.parse(localStorage.getItem("users")) || [];
-    usersData.push({ name, email, phone, password,confirmPassword });
+  const usersData = JSON.parse(localStorage.getItem("users")) || []
 
-    localStorage.setItem("users", JSON.stringify(usersData));
-  alert("Create Account Successfully!")
+  // เช็ค email ซ้ำตรงนี้
+  const exist = usersData.find(u => u.email === email)
+  if(exist){
+    Swal.fire({
+      icon: "warning",
+      title: "อีเมลนี้มีผู้ใช้แล้ว",
+      confirmButtonColor: "#f39c12",
+    })
+    return
+  }
 
-  window.location.href = "/login"
+  usersData.push({ name, email, phone, password })
+  localStorage.setItem("users", JSON.stringify(usersData))
 
+  Swal.fire({
+    icon: "success",
+    title: "สร้างบัญชีสำเร็จ!",
+    confirmButtonColor: "#3d85c6",
+  }).then(() => {
+    window.location.href = "/login"
+  })
 }
+
+
 
   return (
      <div className="min-h-screen flex items-center justify-center bg-white">
