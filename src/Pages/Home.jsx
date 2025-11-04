@@ -22,7 +22,7 @@ const Home = () => {
         <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
           <li><a>ชาย</a></li>
           <li><a>หญิง</a></li>
-          <li><a>อื่น ๆ</a></li>
+          <li><a>เด็ก</a></li>
         </ul>
       </div>
 
@@ -133,7 +133,7 @@ const Home = () => {
                       alt={ad.title}
                       className="w-full h-full object-cover transition duration-500 group-hover:scale-[1.05]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient from-black/70 to-transparent"></div>
                   </figure>
                   <div className="card-body p-6 flex flex-col justify-end text-white">
                     <h2 className="card-title text-2xl md:text-3xl font-bold mb-2">{ad.title}</h2>
