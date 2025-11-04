@@ -8,8 +8,10 @@ import Oversize from "../Category/Men/oversize-shirt.jsx";
 import Sweater from "../Category/Men/sweaterShirt.jsx";
 import Pants from "../Category/Men/pants.jsx";
 import ShirtKids from "../Category/Kids/ShirtKids.jsx";
-
-
+import PantsKids from "../Category/Kids/PantsKids.jsx";
+import SweaterKids from "../Category/Kids/SweaterKids.jsx";
+import SetKids from "../Category/Kids/SetKids.jsx";
+import DressKids from "../Category/Kids/DressKids.jsx";
 const router = createBrowserRouter([
 
 {
@@ -43,8 +45,28 @@ children: [
   },
 
   {
-    path:"/category/kids",
+    path:"/category/kids-tshirt",
     element:<ShirtKids />
+  },
+
+  {
+    path:"/category/kids-pants",
+    element:<PantsKids />
+  },
+
+  {
+    path:"/category/kids-set",
+    element:<SetKids />
+  },
+
+  {
+    path:"/category/kids-dress",
+    element:<DressKids />
+  },
+
+  {
+    path:"/category/kids-sweater",
+    element:<SweaterKids />
   }
 
 
