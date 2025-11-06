@@ -46,7 +46,7 @@ children: [
   },
 
   {
-    path:"/category/kids-tshirt",
+    path:"/category/kids",
     element:<ShirtKids />
   },
 
