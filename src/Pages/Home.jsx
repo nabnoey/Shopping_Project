@@ -24,6 +24,7 @@ const Home = () => {
           <li><a href="/category/oversize-shirt">ชาย</a></li>
           <li><a>หญิง</a></li>
           <li><a href="/category/kids">เด็ก</a></li>
+          <li><a href="/add-product">เพิ่มสินค้า</a></li>
         </ul>
       </div>
 

@@ -18,6 +18,7 @@ import MenuCrop from "../Menu/Crop.jsx"
 import MenuPants from "../Menu/Pants.jsx"
 import MenuSkirt from "../Menu/Skirt.jsx"
 import MenuSweater from "../Menu/Sweater.jsx"
+import AddProduct from "../Pages/AddProduct.jsx";
 
 const router = createBrowserRouter([
 
@@ -117,6 +118,11 @@ children: [
 {
   path:"/register",
   element:<Register />
+},
+
+{
+  path:"/add-product",
+  element:<AddProduct />
 }
 
 
