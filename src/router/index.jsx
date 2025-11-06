@@ -12,6 +12,12 @@ import PantsKids from "../Category/Kids/pantsKids.jsx";
 import SetKids from "../Category/Kids/setKids.jsx"
 import SweaterKids from "../Category/Kids/sweaterKids.jsx"
 import DressKids from "../Category/Kids/dressKids.jsx"
+import MenuOversize from "../Menu/Oversize.jsx"
+import MenuPolo from "../Menu/Polo.jsx"
+import MenuCrop from "../Menu/Crop.jsx"
+import MenuPants from "../Menu/Pants.jsx"
+import MenuSkirt from "../Menu/Skirt.jsx"
+import MenuSweater from "../Menu/Sweater.jsx"
 
 const router = createBrowserRouter([
 
@@ -69,6 +75,35 @@ children: [
   {
     path:"/category/kids-sweater",
     element:<SweaterKids />
+  },
+
+  {
+    path:"/menu-oversize",
+    element:<MenuOversize />
+  },
+
+  {
+    path:"/menu-polo",
+    element:<MenuPolo />
+  },
+
+  {
+    path:"/menu-crop",
+    element:<MenuCrop/>
+  },
+  {
+    path:"/menu-pants",
+    element:<MenuPants />
+  },
+
+  {
+    path:"/menu-skirt",
+    element:<MenuSkirt />
+  },
+
+  {
+    path:"/menu-sweater",
+    element:< MenuSweater/>
   }
 
 

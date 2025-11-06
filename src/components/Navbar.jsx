@@ -3,6 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
+
 function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -98,12 +99,12 @@ function Navbar() {
           </button>
         </div>
         <ul className="menu p-4 text-black gap-y-6">
-          <li><a className="hover:bg-[#FFE6F2]">เสื้อ Oversize</a></li>
-          <li><a className="hover:bg-[#FFE6F2]">เสื้อ Polo</a></li>
-          <li><a className="hover:bg-[#FFE6F2]">เสื้อ ครอป</a></li>
-          <li><a className="hover:bg-[#FFE6F2]">เสื้อ sweater</a></li>
-          <li><a className="hover:bg-[#FFE6F2]">กางเกง</a></li>
-          <li><a className="hover:bg-[#FFE6F2]">กระโปรง</a></li>
+          <li><a href="/menu-oversize" className="hover:bg-[#FFE6F2]" >เสื้อ Oversize</a></li>
+          <li><a href="/menu-polo" className="hover:bg-[#FFE6F2]">เสื้อ Polo</a></li>
+          <li><a href="/menu-crop" className="hover:bg-[#FFE6F2]">เสื้อ ครอป</a></li>
+          <li><a href="/menu-sweater" className="hover:bg-[#FFE6F2]">เสื้อ sweater</a></li>
+          <li><a href="/menu-pants" className="hover:bg-[#FFE6F2]">กางเกง</a></li>
+          <li><a href="/menu-skirt" className="hover:bg-[#FFE6F2]">กระโปรง</a></li>
         </ul>
       </div>
 
