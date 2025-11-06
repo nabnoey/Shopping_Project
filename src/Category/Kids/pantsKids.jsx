@@ -2,7 +2,8 @@ import React from 'react'
 import circleDataKids from "./circleDataKids.json"
 import Card_Product from '../../components/Card_Product'
 import productsData from "../../db.json"
-function ShirtKids() {
+
+function pantsKids() {
   return (
     <div>
       
@@ -27,7 +28,7 @@ function ShirtKids() {
                     </div>
                     
                      <div className="flex justify-between items-center w-full  px-70 pt-20">
-                                  <h2 className="text-[40px] font-medium text-gray-700 truncate">เสื้อ</h2>
+                                  <h2 className="text-[40px] font-medium text-gray-700 truncate">กางเกง</h2>
                                   <button className="text-blue-600 hover:text-blue-800 text-[20px]" type="button">
                                     ดูทั้งหมด
                                   </button>
@@ -36,7 +37,7 @@ function ShirtKids() {
                                       <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                                     {productsData.products
-                                    .filter(p=>p.category === "Tshirt")
+                                    .filter(p=>p.category === "Pants")
                                     .filter(g=>g.gender === "kids")
                                     .map((product) => (
                                     <Card_Product key={product.id} product={product} />
@@ -49,4 +50,4 @@ function ShirtKids() {
   )
 }
 
-export default ShirtKids
+export default pantsKids
