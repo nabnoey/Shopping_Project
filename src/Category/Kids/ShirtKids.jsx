@@ -1,23 +1,23 @@
 import React from 'react'
-import circleDataKids from "./circleDataKids.json"
-import Card_Product from '../../components/Card_Product'
+import CircleDataKids from "./circleDataKids.json"
+import Card_Product from "../../components/Card_Product.jsx"
 import productsData from "../../db.json"
+
 function ShirtKids() {
   return (
-    <div>
-      
-       {/* Menu Bar */}
+    <div>  {/* Menu Bar */}
       <div className="flex justify-start pl-[50px] bg-[#FFF4FB] p-2 w-full">
         <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
-          <li><a href="/men">ชาย</a></li>
+          <li><a href="/category/oversize-shirt">ชาย</a></li>
           <li><a>หญิง</a></li>
-          <li><a>เด็ก</a></li>
+          <li><a href="/category/kids-tshirt">เด็ก</a></li>
         </ul>
       </div>
       
        <div className="w-full flex justify-center mt-20">
+
                       <div className="flex flex-wrap justify-center gap-x-10 gap-y-6">
-                        {circleDataKids.map((circle) => (
+                        {CircleDataKids.map((circle) => (
                           <a key={circle.id} href={circle.link} className="flex flex-col items-center">
                             <img src={circle.imageUrl} alt={circle.label} className="w-24 h-24 rounded-full object-cover" />
                             <span className="mt-2 text-gray-700 font-medium">{circle.label}</span>
@@ -46,6 +46,10 @@ function ShirtKids() {
 
                     
                     </div>
+
+                
+    
+
   )
 }
 

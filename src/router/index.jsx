@@ -13,7 +13,6 @@ import SetKids from "../Category/Kids/setKids.jsx"
 import SweaterKids from "../Category/Kids/sweaterKids.jsx"
 import DressKids from "../Category/Kids/dressKids.jsx"
 
-
 const router = createBrowserRouter([
 
 {
@@ -47,7 +46,7 @@ children: [
   },
 
   {
-    path:"/category/kids",
+    path:"/category/kids-tshirt",
     element:<ShirtKids />
   },
 
@@ -62,13 +61,14 @@ children: [
   },
 
   {
-    path:"/category/kids-sweater",
-    element:<SweaterKids />
+    path:"/category/kids-dress",
+    element:<DressKids />
+
   },
 
   {
-    path:"/category/kids-dress",
-    element:<DressKids />
+    path:"/category/kids-sweater",
+    element:<SweaterKids />
   }
 
 
