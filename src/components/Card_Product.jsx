@@ -1,35 +1,33 @@
-import React from 'react'
+import React from "react";
 import { MdAddShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Card_Product({ product }) {
-  const mockProduct = {
-    product_name: "ตัวอย่างสินค้า",
-    price: 0,
-    image: "https://via.placeholder.com/250x300.png?text=No+Image",
-  };
-
-  const item = product || mockProduct;
-
   return (
-   <div className="card bg-base-100 w-70 shadow-sm">
-  <figure className="h-50 bg-white">
-    <img
+    <div className="card bg-base-100 w-70 shadow-sm hover:shadow-lg transition-all duration-200">
+      <figure className="h-50 bg-white">
+        <Link to={`/product/${product.id}`}>
+          <img
+            src={product.image}
+            alt={product.product_name}
+            className="h-full w-auto object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </Link>
+      </figure>
 
-       src={item.image}
-          alt={item.product_name}
-      className="h-full w-auto object-cover"
-      />
-  </figure>
-  <div className="card-body bg-[#C2A4FF]">
-    <h2 className="card-title font-stretch-90% text-[#1E1B4B]">{item.product_name}</h2>
-    <h3 className="flex justify-right font-bold text-[22px] text-[#8102D0]">฿{item.price}</h3>
-    <div className="card-actions justify-end">
-      <button className="btn rounded-[30px] bg-blue-100 w-20 h-10">
-        <MdAddShoppingCart className='text-black text-[20px]'/></button>
+      <div className="card-body bg-[#C2A4FF]">
+        <h2 className="card-title text-[#1E1B4B]">{product.product_name}</h2>
+        <h3 className="text-right font-bold text-[22px] text-[#8102D0]">
+          ฿{product.price}
+        </h3>
+        <div className="card-actions justify-end">
+          <button className="btn rounded-[30px] bg-blue-100 w-20 h-10 hover:bg-blue-200">
+            <MdAddShoppingCart className="text-black text-[20px]" />
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-  )
+  );
 }
 
-export default Card_Product
+export default Card_Product;

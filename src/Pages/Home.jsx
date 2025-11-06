@@ -1,21 +1,38 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Card_Product from "../components/Card_Product";
 import slides from "../data/dbslide.json";
 import circleData from "../data/circleData.json";
 import advertisementData from "../data/advertisementData.json";
-import productsData from "../db.json";
 
 const Home = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { align: "start", loop: true, slidesToScroll: 1 },
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
   );
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
+  useEffect(() => {
+    fetch("http://localhost:5000/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("โหลดข้อมูลสินค้าไม่สำเร็จ:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p className="text-center text-gray-500 mt-10">กำลังโหลดข้อมูลสินค้า...</p>;
+  }
   return (
     <>
       {/* Menu Bar */}
@@ -78,13 +95,13 @@ const Home = () => {
               </button>
             </div>
 
-            <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {productsData.products.map((product) => (
-                <Card_Product key={product.id} product={product} />
-              ))}
-              </div>
-            </div>
+             <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <Card_Product key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
          
 
           {/* Collection Section */}
@@ -157,27 +174,26 @@ const Home = () => {
             <button className="text-blue-600 hover:text-blue-800 text-[20px]">ดูทั้งหมด</button>
           </div>
 
-          <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {productsData.products.map((product) => (
-                <Card_Product key={product.id} product={product} />
-              ))}
-              </div>
-          </div>
-
+           <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <Card_Product key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
           {/* Trousers */}
           <div className="flex justify-between items-center w-full px-2 pt-30">
             <h2 className="text-[40px] font-medium text-gray-700 truncate">Trousers</h2>
             <button className="text-blue-600 hover:text-blue-800 text-[20px]">ดูทั้งหมด</button>
           </div>
 
-          <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {productsData.products.map((product) => (
-                <Card_Product key={product.id} product={product} />
-            ))}
-            </div>
-          </div>
+           <div className="pt-8 flex gap-x-6 flex-wrap justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <Card_Product key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
         </div>
       </div>
     </>
