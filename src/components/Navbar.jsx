@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { BsHandbag } from "react-icons/bs";
+
 
 
 function Navbar() {
@@ -38,7 +40,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-9 items-center">
         <div className="relative">
           <input
             type="text"
@@ -48,6 +50,7 @@ function Navbar() {
           <CiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-pink-400 text-2xl cursor-pointer hover:scale-110 transition-transform" />
         </div>
 
+ <BsHandbag className="text-[26px] text-pink-500 cursor-pointer hover:scale-110 transition-transform" />
       
        {currentUser ? (
   <div className="dropdown dropdown-end">
