@@ -105,7 +105,12 @@ children: [
   {
     path:"/menu-sweater",
     element:< MenuSweater/>
-  }
+  },
+  
+{
+  path:"/add-product",
+  element:<AddProduct />
+}
 
 
 ]},
@@ -120,10 +125,6 @@ children: [
   element:<Register />
 },
 
-{
-  path:"/add-product",
-  element:<AddProduct />
-}
 
 
 

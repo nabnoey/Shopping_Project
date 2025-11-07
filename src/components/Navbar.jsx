@@ -12,6 +12,7 @@ function Navbar() {
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
+
   return (
     <div className="navbar bg-[#FFF4FB] text-black py-7 px-10 relative ">
       <div className="flex-1">

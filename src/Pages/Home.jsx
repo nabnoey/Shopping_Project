@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Card_Product from "../components/Card_Product";
+import Card_Product from "../components/Card_Product.jsx"
 import slides from "../data/dbslide.json";
 import circleData from "../data/circleData.json";
 import advertisementData from "../data/advertisementData.json";
@@ -16,15 +16,25 @@ const Home = () => {
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
+   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const isAdmin = currentUser?.role === "admin";
+
+    
   return (
     <>
-      {/* Menu Bar */}
+      
       <div className="flex justify-start pl-[50px] bg-[#FFF4FB]  w-full">
         <ul className="menu menu-horizontal bg-[#FFF8FC] rounded-box text-black gap-x-6 text-[18px]">
           <li><a href="/category/oversize-shirt">ชาย</a></li>
           <li><a>หญิง</a></li>
           <li><a href="/category/kids">เด็ก</a></li>
-          <li><a href="/add-product">เพิ่มสินค้า</a></li>
+           {isAdmin && (
+            <li>
+              <a href ="/add-product" className="hover:bg-[#FFE6F2] text-red-500 font-bold">
+                 Add product
+              </a>
+            </li>
+          )}
         </ul>
       </div>
 

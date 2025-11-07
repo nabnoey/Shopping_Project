@@ -37,7 +37,7 @@ function AddProduct() {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-10 pt-20">
+    <div className="max-w-lg mx-auto mt-10 pt-5">
       <div className="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded-2xl p-6 border border-pink-100">
 
         <h2 className="text-3xl font-bold text-center mb-1 text-[#FF6FA5]">
