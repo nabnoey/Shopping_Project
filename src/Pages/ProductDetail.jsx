@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaStar, FaHeart } from "react-icons/fa"; // ✅ เพิ่ม FaHeart
+import { FaStar, FaHeart } from "react-icons/fa";
 import { MdAddShoppingCart } from "react-icons/md";
 
 function ProductDetail() {
@@ -8,26 +8,42 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [customers, setCustomers] = useState([]);
+  const [allProducts, setAllProducts] = useState([]); // ✅ ย้ายมาข้างใน function
+  const [relatedProducts, setRelatedProducts] = useState([]); // ✅ เพิ่ม state สำหรับสินค้าที่เกี่ยวข้อง
   const [loading, setLoading] = useState(true);
-  const [quantity, setQuantity] = useState(1); // ✅ เพิ่ม state จำนวนสินค้า
-  const [isFavorite, setIsFavorite] = useState(false); // ✅ เพิ่ม state favorite
+  const [quantity, setQuantity] = useState(1);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [productRes, reviewsRes, customersRes] = await Promise.all([
-          fetch(`http://localhost:5000/products/${id}`),
-          fetch(`http://localhost:5000/reviews?P_Id=${id}`),
-          fetch("http://localhost:5000/customers"),
-        ]);
+        const [productRes, reviewsRes, customersRes, allProductsRes] =
+          await Promise.all([
+            fetch(`http://localhost:5000/products/${id}`),
+            fetch(`http://localhost:5000/reviews?P_Id=${id}`),
+            fetch("http://localhost:5000/customers"),
+            fetch("http://localhost:5000/products"),
+          ]);
 
         const productData = await productRes.json();
         const reviewData = await reviewsRes.json();
         const customerData = await customersRes.json();
+        const allProductsData = await allProductsRes.json();
 
         setProduct(productData);
         setReviews(reviewData);
         setCustomers(customerData);
+        setAllProducts(allProductsData);
+
+        // ✅ คำนวณสินค้าที่เกี่ยวข้อง
+        const related = allProductsData.filter(
+          (p) =>
+            p.category === productData.category &&
+            p.gender === productData.gender &&
+            p.id !== productData.id
+        );
+
+        setRelatedProducts(related);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -160,52 +176,74 @@ function ProductDetail() {
       </div>
 
       {/* ---------- ส่วนรีวิวลูกค้า ---------- */}
-<div className="mt-10 bg-white p-6 rounded-xl shadow-md">
-  <h3 className="text-xl font-bold mb-4">รีวิวของลูกค้า</h3>
+      <div className="mt-10 bg-white p-6 rounded-xl shadow-md">
+        <h3 className="text-xl font-bold mb-4">รีวิวของลูกค้า</h3>
 
-  {reviews.length > 0 ? (
-    <>
-      {/* คะแนนเฉลี่ย */}
-      <div className="flex items-center gap-2 mb-4">
-        <FaStar className="text-yellow-400" />
-        <span className="text-lg font-semibold">{avgRating}</span>
-        <span className="text-gray-500">จาก {reviews.length} รีวิว</span>
-      </div>
-
-      {/* รายการรีวิว */}
-      <div className="space-y-6">
-        {reviews.map((r) => (
-          <div
-            key={r.R_Id}
-            className="border-b pb-4 border-gray-200 last:border-none"
-          >
-            {/* ดาวคะแนน */}
-            <div className="flex items-center gap-2 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <FaStar
-                  key={i}
-                  className={`${
-                    i < r.rating ? "text-yellow-400" : "text-gray-300"
-                  }`}
-                />
-              ))}
+        {reviews.length > 0 ? (
+          <>
+            {/* คะแนนเฉลี่ย */}
+            <div className="flex items-center gap-2 mb-4">
+              <FaStar className="text-yellow-400" />
+              <span className="text-lg font-semibold">{avgRating}</span>
+              <span className="text-gray-500">จาก {reviews.length} รีวิว</span>
             </div>
 
-            {/* ข้อความรีวิว */}
-            <p className="text-gray-700">{r.text}</p>
+            {/* รายการรีวิว */}
+            <div className="space-y-6">
+              {reviews.map((r) => (
+                <div
+                  key={r.R_Id}
+                  className="border-b pb-4 border-gray-200 last:border-none"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar
+                        key={i}
+                        className={`${
+                          i < r.rating ? "text-yellow-400" : "text-gray-300"
+                        }`}
+                      />
+                    ))}
+                  </div>
 
-            {/* ชื่อผู้รีวิว */}
-            <p className="text-sm text-gray-500 mt-2">
-              โดย: {getCustomerName(r.User_Id)}
-            </p>
-          </div>
-        ))}
+                  <p className="text-gray-700">{r.text}</p>
+                  <p className="text-sm text-gray-500 mt-2">
+                    โดย: {getCustomerName(r.User_Id)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : (
+          <p className="text-gray-500">ยังไม่มีรีวิวสำหรับสินค้านี้</p>
+        )}
       </div>
-    </>
-  ) : (
-    <p className="text-gray-500">ยังไม่มีรีวิวสำหรับสินค้านี้</p>
-  )}
-</div>
+
+      {/* ---------- สินค้าที่เกี่ยวข้อง ---------- */}
+      {relatedProducts.length > 0 && (
+        <div className="mt-10 bg-white p-6 rounded-xl shadow-md">
+          <h3 className="text-xl font-bold mb-4">
+            สินค้าในหมวดเดียวกัน ({product.category} - {product.gender})
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {relatedProducts.map((item) => (
+              <div
+                key={item.id}
+                className="border rounded-lg p-3 hover:shadow-lg transition cursor-pointer"
+              >
+                <img
+                  src={item.image}
+                  alt={item.product_name}
+                  className="w-full h-48 object-cover rounded-md mb-2"
+                />
+                <p className="font-semibold text-gray-800">{item.product_name}</p>
+                <p className="text-sm text-gray-500">{item.description}</p>
+                <p className="text-[#F472B6] font-bold mt-1">฿{item.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
