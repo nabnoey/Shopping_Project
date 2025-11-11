@@ -19,6 +19,8 @@ import MenuPants from "../Menu/Pants.jsx"
 import MenuSkirt from "../Menu/Skirt.jsx"
 import MenuSweater from "../Menu/Sweater.jsx"
 import AddProduct from "../Pages/AddProduct.jsx";
+import Profile from "../Pages/Profile.jsx";
+import ProfileSidebar from "../components/ProfileSidebar.jsx";
 
 const router = createBrowserRouter([
 
@@ -110,8 +112,18 @@ children: [
 {
   path:"/add-product",
   element:<AddProduct />
-}
+},
 
+{
+  path:"/",
+  element:<ProfileSidebar />,
+  children:[
+    {
+      path:"/profile",
+      element:<Profile/>
+    }
+  ]
+}
 
 ]},
 
