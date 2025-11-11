@@ -9,9 +9,9 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [customers, setCustomers] = useState([]);
-  const [allProducts, setAllProducts] = useState([]); 
-  const [relatedProducts, setRelatedProducts] = useState([]); 
-  const [colorFilteredProducts, setColorFilteredProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [colorVariants, setColorVariants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -38,7 +38,7 @@ function ProductDetail() {
         setCustomers(customerData);
         setAllProducts(allProductsData);
 
-        // ✅ คำนวณสินค้าที่เกี่ยวข้อง
+        // สินค้าที่เกี่ยวข้อง: same category & gender
         const related = allProductsData.filter(
           (p) =>
             p.category === productData.category &&
@@ -47,12 +47,19 @@ function ProductDetail() {
         );
         setRelatedProducts(related);
 
-         const colorFiltered = allProductsData.filter(
-          (p) =>
-            p.color === productData.color &&
-            p.id !== productData.id
-        );
-        setColorFilteredProducts(colorFiltered);
+        // สีสินค้าที่มีใน category & gender
+        const colors = [
+          ...new Set(
+            allProductsData
+              .filter(
+                (p) =>
+                  p.category === productData.category &&
+                  p.gender === productData.gender
+              )
+              .map((p) => p.color)
+          ),
+        ];
+        setColorVariants(colors);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -83,15 +90,13 @@ function ProductDetail() {
   return (
     <div className="p-6 max-w-5xl mx-auto">
 
-     {/*  ปุ่มกลับหน้าแรก */}
+      {/* ปุ่มกลับหน้าแรก */}
       <button
-        onClick={() => navigate("/")} 
-        className="mb-4 flex items-center gap-2 px-4 py-mb-6 px-5 py-2 bg-purple-100 text-purple-700 font-medium rounded-full 
-             shadow-sm hover:bg-purple-200 active:scale-95 transition-all duration-200"
+        onClick={() => navigate("/")}
+        className="mb-4 flex items-center gap-2 px-5 py-2 bg-purple-100 text-purple-700 font-medium rounded-full shadow-sm hover:bg-purple-200 active:scale-95 transition-all duration-200"
       >
         กลับหน้าแรก
       </button>
-
 
       {/* ---------- ข้อมูลสินค้า ---------- */}
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-md p-6 grid md:grid-cols-2 gap-6">
@@ -115,29 +120,43 @@ function ProductDetail() {
 
         {/* รายละเอียดสินค้า */}
         <div>
-          <h1 className="text-2xl font-bold text-purple-900">
-            {product.product_name}
-          </h1>
+          <h1 className="text-2xl font-bold text-purple-900">{product.product_name}</h1>
           <p className="text-gray-600 mt-2">{product.description}</p>
 
           <p className="text-3xl mt-4 font-semibold" style={{ color: "#F472B6" }}>
             ฿{product.price}
           </p>
 
-          {/* สีสินค้า */}
-      {colorFilteredProducts.length > 0 && (
+         {/* สีสินค้า */}
+{colorVariants.length > 0 && (
   <div className="mt-4">
-    <p className="font-semibold mb-2">สีอื่นๆ:</p>
-    <div className="flex gap-2">
-      {/* แสดงสีอื่น ๆ */}
-      {colorFilteredProducts.map((p) => (
-        <span
-          key={p.id}
-          className="w-8 h-8 rounded-full border flex items-center justify-center cursor-pointer hover:border-purple-500"
-          style={{ backgroundColor: p.color }}
-          onClick={() => navigate(`/product/${p.id}`)}
-        ></span>
-      ))}
+    <p className="font-semibold mb-1">สีอื่น ๆ ของสินค้า:</p>
+    <div className="flex gap-3">
+      {colorVariants.map((color) => {
+        const variantProduct = allProducts.find(
+          (p) =>
+            p.category === product.category &&
+            p.gender === product.gender &&
+            p.color === color
+        );
+        if (!variantProduct) return null;
+
+        return (
+          <div
+            key={color}
+            className={`flex flex-col items-center cursor-pointer transition ${
+              product.color === color ? "border-2 border-purple-700 rounded-md p-1" : ""
+            }`}
+            onClick={() => navigate(`/product/${variantProduct.id}`)}
+          >
+            <img
+              src={variantProduct.image}
+              alt={variantProduct.product_name}
+              className="w-20 h-20 object-cover rounded-md"
+            />
+          </div>
+        );
+      })}
     </div>
   </div>
 )}
@@ -157,31 +176,26 @@ function ProductDetail() {
             </div>
           </div>
 
-         {/* จำนวนสินค้า */}
+          {/* จำนวนสินค้า */}
           <div className="flex items-center gap-3 mb-4 mt-4">
             <span className="text-gray-700 font-medium">จำนวน</span>
-
             <div className="flex items-center border border-gray-300 rounded-full overflow-hidden bg-white">
               <button
-                    onClick={handleDecrease}
-                    className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">
-                   −
+                onClick={handleDecrease}
+                className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition"
+              >
+                −
               </button>
-
-            <span className="w-10 text-center text-gray-800 select-none">
-                  {quantity}
-            </span>
-
-                <button
-                    onClick={handleIncrease}
-                    className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">
-               +
-                  </button>
+              <span className="w-10 text-center text-gray-800 select-none">{quantity}</span>
+              <button
+                onClick={handleIncrease}
+                className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition"
+              >
+                +
+              </button>
             </div>
-
             <span className="text-gray-700 font-medium">ชิ้น</span>
           </div>
-
 
           {/* ปุ่มเพิ่มลงตะกร้า + หัวใจ */}
           <div className="flex items-center gap-3">
@@ -197,9 +211,7 @@ function ProductDetail() {
               }`}
             >
               <FaHeart
-                className={`text-2xl transition ${
-                  isFavorite ? "text-pink-500" : "text-gray-400"
-                }`}
+                className={`text-2xl transition ${isFavorite ? "text-pink-500" : "text-gray-400"}`}
               />
             </button>
           </div>
@@ -212,31 +224,23 @@ function ProductDetail() {
 
         {reviews.length > 0 ? (
           <>
-            {/* คะแนนเฉลี่ย */}
             <div className="flex items-center gap-2 mb-4">
               <FaStar className="text-yellow-400" />
               <span className="text-lg font-semibold">{avgRating}</span>
               <span className="text-gray-500">จาก {reviews.length} รีวิว</span>
             </div>
 
-            {/* รายการรีวิว */}
             <div className="space-y-6">
               {reviews.map((r) => (
-                <div
-                  key={r.R_Id}
-                  className="border-b pb-4 border-gray-200 last:border-none"
-                >
+                <div key={r.R_Id} className="border-b pb-4 border-gray-200 last:border-none">
                   <div className="flex items-center gap-2 mb-2">
                     {[...Array(5)].map((_, i) => (
                       <FaStar
                         key={i}
-                        className={`${
-                          i < r.rating ? "text-yellow-400" : "text-gray-300"
-                        }`}
+                        className={`${i < r.rating ? "text-yellow-400" : "text-gray-300"}`}
                       />
                     ))}
                   </div>
-
                   <p className="text-gray-700">{r.text}</p>
                   <p className="text-sm text-gray-500 mt-2">
                     โดย: {getCustomerName(r.User_Id)}
@@ -251,42 +255,38 @@ function ProductDetail() {
       </div>
 
       {/* ---------- สินค้าที่เกี่ยวข้อง ---------- */}
-{relatedProducts.length > 0 && (
-  <div className="mt-10 bg-white p-6 rounded-xl shadow-md">
-    <h3 className="text-xl font-bold mb-4">
-      สินค้าในหมวดเดียวกัน ({product.category} - {product.gender})
-    </h3>
+      {relatedProducts.length > 0 && (
+        <div className="mt-10 bg-white p-6 rounded-xl shadow-md">
+          <h3 className="text-xl font-bold mb-4">
+            สินค้าในหมวดเดียวกัน ({product.category} - {product.gender})
+          </h3>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {relatedProducts.map((item) => (
-        <div
-          key={item.id}
-          className="border rounded-lg p-3 hover:shadow-lg transition hover:bg-purple-50"
-        >
-          <img
-            src={item.image}
-            alt={item.product_name}
-            className="w-full h-48 object-cover rounded-md mb-2"
-          />
-          <p className="font-semibold text-gray-800">{item.product_name}</p>
-          <p className="text-sm text-gray-500 line-clamp-2">
-            {item.description}
-          </p>
-          <p className="text-[#F472B6] font-bold mt-1">฿{item.price}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {relatedProducts.map((item) => (
+              <div
+                key={item.id}
+                className="border rounded-lg p-3 hover:shadow-lg transition hover:bg-purple-50"
+              >
+                <img
+                  src={item.image}
+                  alt={item.product_name}
+                  className="w-full h-48 object-cover rounded-md mb-2"
+                />
+                <p className="font-semibold text-gray-800">{item.product_name}</p>
+                <p className="text-sm text-gray-500 line-clamp-2">{item.description}</p>
+                <p className="text-[#F472B6] font-bold mt-1">฿{item.price}</p>
 
-          {/* ปุ่มดูรายละเอียด */}
-          <button
-            onClick={() => navigate(`/product/${item.id}`)}
-            className="mt-3 w-full bg-purple-100 text-purple-700 rounded-md py-1 font-medium hover:bg-purple-200 active:scale-95 transition-all"
-          >
-            ดูรายละเอียด
-          </button>
+                <button
+                  onClick={() => navigate(`/product/${item.id}`)}
+                  className="mt-3 w-full bg-purple-100 text-purple-700 rounded-md py-1 font-medium hover:bg-purple-200 active:scale-95 transition-all"
+                >
+                  ดูรายละเอียด
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-)}
-
+      )}
     </div>
   );
 }
