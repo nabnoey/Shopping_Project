@@ -1,7 +1,8 @@
 import React from 'react'
+import Swal from "sweetalert2";
 import { MdAddShoppingCart } from "react-icons/md";
 
-function Card_Product({ product }) {
+function Card_Product({ product, onDelete }) {
   const mockProduct = {
     product_name: "ตัวอย่างสินค้า",
     price: 0,
@@ -12,6 +13,24 @@ function Card_Product({ product }) {
 
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     const isAdmin = currentUser?.role === "admin";
+
+      const handleDelete = () => {
+    Swal.fire({
+      title: "ยืนยันลบสินค้า?",
+      text: "ลบแล้วไม่สามารถย้อนกลับได้",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#aaa",
+      confirmButtonText: "ลบเลย",
+      cancelButtonText: "ยกเลิก"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        onDelete(product.id);   // ส่ง id กลับไปให้ parent ไปลบ
+        Swal.fire("ลบแล้ว!", "สินค้าถูกลบสำเร็จ", "success");
+      }
+    });
+  };
 
   return (
     <div className="card bg-base-100 w-70 shadow-sm">
@@ -40,7 +59,9 @@ function Card_Product({ product }) {
           {isAdmin && (
             <>
               <button className="btn btn-warning btn-sm">EDIT</button>
-              <button className="btn btn-error btn-sm">DELETE</button>
+               <button onClick={handleDelete} className="btn btn-error btn-sm">
+            DELETE
+          </button>
             </>
           )}
         </div>
